@@ -1,0 +1,198 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background: #2563a6;
+    color: #fff;
+    padding: 32px 0 0 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.07);
+    z-index: 100;
+    transition: transform 0.2s;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li {
+    margin: 0 0 18px 0;
+}
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.08rem;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 6px 0 0 6px;
+    transition: background 0.18s, color 0.18s;
+}
+.sidebar a:hover, .sidebar a.active {
+    background: #e3f0fb;
+    color: #2563a6;
+}
+.sidebar.visible {
+    transform: translateX(0);
+}
+@media (max-width: 900px) {
+    .sidebar {
+        width: 170px;
+        padding-top: 18px;
+    }
+    .sidebar a {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+
+/* Login background */
+.login-bg {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9333B9;
+}
+
+/* Login card */
+.login-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(86,32,122,0.18);
+    max-width: 420px;
+    width: 100%;
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+}
+.login-card-header {
+    background: #2d3b47;
+    color: #fff;
+    padding: 32px 24px 18px 24px;
+    text-align: center;
+}
+.login-card-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.login-subtitle {
+    font-size: 1.1rem;
+    color: #cfd8dc;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+/* Login form */
+.login-form {
+    padding: 32px 24px 18px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.login-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #222;
+}
+.login-form .input {
+    position: relative;
+    margin-bottom: 18px;
+}
+.login-form .input i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9333B9;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+.login-form input {
+    width: 100%;
+    padding: 12px 12px 12px 48px; /* makes room for icon */
+    border-radius: 8px;
+    border: 1.5px solid #e0e0e0;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+.login-form input:focus {
+    border-color: #9333B9;
+    outline: none;
+}
+
+/* Buttons (login + register) */
+.login-btn,
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(86,32,122,0.08);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Login button style */
+.login-btn {
+    background: linear-gradient(90deg, #7b7fd7 0%, #6a4fb3 100%);
+}
+.login-btn:hover {
+    background: linear-gradient(90deg, #6a4fb3 0%, #7b7fd7 100%);
+    box-shadow: 0 4px 16px rgba(86,32,122,0.12);
+}
+
+/* Register button style */
+.register-btn {
+    background: #1076ca;
+}
+.register-btn:hover {
+    background: linear-gradient(to right, rgb(86, 32, 122), rgb(209, 143, 229));
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, #62277e, #f88810);
+    color: #fff;
+    padding: 18px 0 12px 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px rgba(59,130,246,0.08);
+    z-index: 100;
+}
+.footer i, .footer strong, .footer small {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
